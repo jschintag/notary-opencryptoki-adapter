@@ -1,0 +1,23 @@
+package: github.com/jschintag/notary-opencryptoki-adapter
+import:
+- package: github.com/miekg/pkcs11
+  version: 6120d95c0e9576ccf4a78ba40855809dca31a9ed
+- package: github.com/sirupsen/logrus
+  version: v1.4.0
+- package: github.com/theupdateframework/notary
+  version: opencryptoki
+  subpackages:
+  - trustmanager/pkcs11/common
+  - trustmanager/pkcs11/externalstore
+  - tuf/data
+  - tuf/utils
+- package: github.com/sevlyar/go-daemon
+  version: v0.1.5
+- package: golang.org/x/sys
+  subpackages:
+  - unix
+testImport:
+- package: github.com/stretchr/testify
+  version: v1.3.0
+  subpackages:
+  - require
